@@ -1,0 +1,46 @@
+navbar-size {
+  width: 95%;
+  margin: 0 auto;
+  }
+  .user-image-size {
+  height: 56px;
+  margin: 4px 0;
+  }
+  .main-body {
+  background-color: #F28487;
+  color: white;
+  height: calc(100vh - 64px);
+  }
+  .materialboxed-image {
+  margin: 0 auto;
+  height: 400px;
+  }
+  .click-me-button {
+  background-color: #EE6E73;
+  margin-top: 50px;
+  }
+  .card {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-image img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .card-content, .card-reveal {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  .btn.custom-gradient {
+    background: linear-gradient(to right, #42a5f5, #478ed1);
+    border-radius: 25px;
+    padding: 0 24px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn.custom-gradient:hover {
+    background: linear-gradient(to right, #478ed1, #42a5f5);
+  }
+  
