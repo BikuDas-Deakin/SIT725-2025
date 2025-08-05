@@ -1,17 +1,17 @@
-const cardList = [
-  {
-    title: "Kitten 2",
-    image: "images/CAT2.jpg",
-    link: "About Kitten 2",
-    description: "Demo description about kitten 2"
-  },
-  {
-    title: "Kitten 3",
-    image: "images/CAT3.jpg",
-    link: "About Kitten 3",
-    description: "Demo description about kitten 3"
-  }
-];
+// const cardList = [
+//   {
+//     title: "Kitten 2",
+//     image: "images/CAT2.jpg",
+//     link: "About Kitten 2",
+//     description: "Demo description about kitten 2"
+//   },
+//   {
+//     title: "Kitten 3",
+//     image: "images/CAT3.jpg",
+//     link: "About Kitten 3",
+//     description: "Demo description about kitten 3"
+//   }
+// ];
 
 const clickMe = () => {
   alert("Thanks for clicking me. Hope you have a nice day!");
@@ -54,16 +54,21 @@ const addCards = (items) => {
   });
 };
 
-$(document).ready(function () {
-  // Initialize Materialize components
+$(document).ready(function(){
   $('.materialboxed').materialbox();
+  $('#formSubmit').click(()=>{
+  submitForm();
+  })
+  getProjects();
   $('.modal').modal();
-
-  // Event listeners
-  $('#formSubmit').click((event) => {
-    submitForm(event);
   });
+  
 
-  // Add dynamic cards
-  addCards(cardList);
-});
+const getProjects = () => {
+  $.get('/api/projects',(response) => {
+  if(response.statusCode==200){
+  addCards(response.data);
+  }
+  })
+  }
+  
